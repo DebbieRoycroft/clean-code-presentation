@@ -15,7 +15,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="reveal.js/css/reveal.min.css">
-		<link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
+		<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+                <link rel="stylesheet" href="css/textcolours.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
@@ -50,12 +51,32 @@
 					</p>
 				</section>
                             <section>
+                                But I'm a developer- why do I need to know about testing?
+                                The sooner bugs are found the cheaper/easier they are to fix
+                                Stop faults recurring
+                                Make sure your code does what the customer wants
+                                Boundaries between developer and QA are more blurred
+                            </section>
+                            <section>
+                                Many different kinds of testing 
+                                Not all will suit all projects/teams
+                                Pick what works for you
+                            </section>
+                            <section>
                                 <h2>Manual Testing</h2>
+                                Code review
+                                Running by hand and checking
+                                Better than nothing but time-consuming if you need to do it more than once
+                                Maybe we should look at automated testing...
                             </section>
                             <section>
                                 <section>
                                 <h2>Static Checking</h2>
                                 <h3>Check code for 'simple' errors or code standards violations</h3>
+                                Simple form of automated testing
+                                Catch well-known gotchas
+                                Helps keep code consistent and readable
+                                Won't make sure your code works to spec
                                 </section>
                                 <section>
                                     <h2>Static Checking Tools</h2>
@@ -76,6 +97,17 @@
                                     <li class='fragment roll-in'>Each test is independent</li>
                                     <li class='fragment roll-in'>Aim of each test should be clear</li>
                                     <li class='fragment roll-in'>Treat unit test code like production code</li>
+                                    <li class='fragment roll-in'>Don't just exercise the 'happy path'</li>
+                                    <li class='fragment roll-in'>Cover edge cases</li>
+                                    <li class='fragment roll-in'>Cover exception conditions</li>
+                                    <li class='fragment roll-in'>Always use varied data</li>
+                                    <li class='fragment roll-in'>Take care with mocks/dummies</li>
+                                    <li class='fragment roll-in'>Test to the public interface</li>
+                                    <li class='fragment roll-in'>Don't be concerned with internals</li>
+                                    <li class='fragment roll-in'>Beware of singletons/global data</li>
+                                    <li class='fragment roll-in'>Design code with dependency injection</li>
+                                    <li class='fragment roll-in'>Code with small functions, single responsibility</li>
+                                    <li class="fragment roll-in">Gives us confidence to refactor code</li>
                                 </ul>
                                 </section>
                                 <section>
@@ -98,13 +130,32 @@
                                 </section>
                             </section>
                             <section>
+                                <h1>Testing the Bigger Picture</h1>
                                 <h2>Integration Testing</h2>
+                                <ul>
+                                    <li>TestNG</li>
+                                    <li>Cucumber</li>
+                                    <li>JBehave</li>
+                                    <li>JMeter</li>
+                                    <li>SOAPUI</li>
+                                </ul>
                             </section>
                             <section>
-                                <h2>User Interface Testing</h2>
+                                <h1>User Interface Testing</h1>
+                                <ul>
+                                    <li>No magic bullets</li>
+                                    <li>Often fragile</li>
+                                    <li>Tend to be slow</li>
+                                    <li>Hard to run in automated CI</li>
+                                    <li>Webdrivers e.g. Selenium</li>
+                                    <li>Swing tools e.g. Abbot</li>
+                                    <li>JavaFX tools</li>
+                                </ul>
                             </section>
                             <section>
                                 <h2>Performance Testing</h2>
+                                <h2>Stress Testing</h2>
+                                <h2>Load Testing</h2>
                             </section>
                             <section>Useful Resources</section>
                             <section>Manchester Java Community <a href="http://twitter.com/mcrjava">@mcrjava</a></section>
